@@ -56,6 +56,9 @@ const i18n = {
     'rsvp.nameReq': 'Ju lutemi shkruani emrin tuaj.',
     'rsvp.demo': 'Demo: forma nuk është lidhur ende. Krijoni një formë falas në formspree.io dhe vendosni ID-në te index.html.',
     'footer.thanks': 'Me dashuri dhe mirënjohje, ju presim me gëzim!',
+    'intro.eyebrow': 'Ftesë për dasmën tonë',
+    'intro.line': 'Po martohemi!',
+    'intro.sub': 'Ju presim me gëzim më 3 gusht 2026',
     'intro.skip': 'Prekni për të vazhduar',
     'cal.title': 'Dasma e Endrit dhe Kristjanës',
     'cal.desc': 'Fjalimi i dasmës në Sallën e Mbretërisë.',
@@ -111,6 +114,9 @@ const i18n = {
     'rsvp.nameReq': 'Please enter your name.',
     'rsvp.demo': 'Demo: the form is not connected yet. Create a free form at formspree.io and set the ID in index.html.',
     'footer.thanks': 'With love and gratitude, we joyfully await you!',
+    'intro.eyebrow': 'An invitation to our wedding',
+    'intro.line': "We're getting married!",
+    'intro.sub': 'Joyfully awaiting you on August 3, 2026',
     'intro.skip': 'Tap to continue',
     'cal.title': 'Wedding of Endri and Kristjana',
     'cal.desc': 'Wedding talk at the Kingdom Hall.',
@@ -336,24 +342,31 @@ function buildIntro() {
   intro.id = 'intro';
   intro.setAttribute('aria-hidden', 'true');
 
-  const letters = 'Endri & Kristjana'
-    .split('')
-    .map((ch, i) => {
-      const glyph = ch === ' ' ? '&nbsp;' : ch === '&' ? '<span class="amp">&amp;</span>' : ch;
-      return '<span class="intro-letter" style="animation-delay:' + (0.35 + i * 0.075).toFixed(3) + 's">' + glyph + '</span>';
+  let letterIndex = 0;
+  const letters = t('intro.line')
+    .split(' ')
+    .map((word) => {
+      const inner = word
+        .split('')
+        .map((ch) => {
+          const glyph = ch === '&' ? '<span class="amp">&amp;</span>' : ch;
+          return '<span class="intro-letter" style="animation-delay:' + (0.35 + letterIndex++ * 0.07).toFixed(3) + 's">' + glyph + '</span>';
+        })
+        .join('');
+      return '<span class="intro-word">' + inner + '</span>';
     })
-    .join('');
+    .join(' ');
 
   intro.innerHTML =
     '<div class="petals"></div>' +
-    '<p class="intro-eyebrow">' + t('hero.eyebrow') + '</p>' +
+    '<p class="intro-eyebrow">' + t('intro.eyebrow') + '</p>' +
     '<p class="intro-names">' + letters + '</p>' +
     '<div class="intro-cord"><svg viewBox="0 0 600 50" preserveAspectRatio="none">' +
     '<path class="cord cord-1" d="M0,25 C40,8 80,42 120,25 S200,8 240,25 S320,42 360,25 S440,8 480,25 S560,42 600,25"/>' +
     '<path class="cord cord-2" d="M0,25 C40,42 80,8 120,25 S200,42 240,25 S320,8 360,25 S440,42 480,25 S560,8 600,25"/>' +
     '<path class="cord cord-3" d="M0,25 C50,25 90,25 150,25 S250,25 300,25 S450,25 600,25"/>' +
     '</svg></div>' +
-    '<p class="intro-date">' + t('hero.date') + '</p>' +
+    '<p class="intro-sub">' + t('intro.sub') + '</p>' +
     '<p class="intro-skip">' + t('intro.skip') + '</p>';
 
   document.body.appendChild(intro);
