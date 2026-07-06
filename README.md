@@ -17,17 +17,9 @@ npx serve .
 
 ## Fotot
 
-Krijoni dosjen `assets/` dhe vendosni fotot me këta emra (ose ndryshoni emrat në kod):
-
-| Skedari | Vendi | Përmasa e sugjeruar |
-|---|---|---|
-| `assets/foto-kryesore.jpg` | Nën hero | 1600 × 900 |
-
-Për të zëvendësuar një placeholder, ndërroni `<div class="photo-placeholder">...</div>` me:
-
-```html
-<img src="assets/foto-kryesore.jpg" alt="Endri dhe Kristjana" style="width:100%;border-radius:18px;">
-```
+Fotoja kryesore ndodhet te `assets/foto-kryesore.jpeg` dhe shfaqet nën hero
+me kornizë harku. Për ta ndërruar, thjesht zëvendësoni skedarin me një foto
+tjetër (mundësisht portret, p.sh. 960 × 1280).
 
 ## Forma RSVP (Formspree — falas)
 
