@@ -7,9 +7,7 @@ const WEDDING_END = new Date(2026, 7, 3, 19, 30, 0);
 /* ================= Translations ================= */
 const i18n = {
   sq: {
-    'nav.story': 'Historia jonë',
     'nav.ceremony': 'Ceremonia',
-    'nav.gallery': 'Galeria',
     'nav.rsvp': 'Konfirmo',
     'hero.eyebrow': 'Me bekimin e Jehovait',
     'hero.date': 'E hënë, 3 gusht 2026 · ora 18:00',
@@ -24,15 +22,6 @@ const i18n = {
     'cd.secs': 'Sekonda',
     'cd.married': 'U martuam!',
     'photo.main': 'Vendosni këtu foton tuaj kryesore',
-    'photo.here': 'Foto këtu',
-    'story.eyebrow': 'Rrugëtimi ynë',
-    'story.title': 'Historia jonë',
-    'story.item1.title': 'Si u njohëm',
-    'story.item1.text': 'Shkruani këtu historinë tuaj — ku u takuat për herë të parë, çfarë ju bëri përshtypje dhe si nisi gjithçka.',
-    'story.item2.title': 'Propozimi',
-    'story.item2.text': 'Momenti i veçantë kur vendosët të bashkoni jetët tuaja — shkruani këtu se si ndodhi.',
-    'story.item3.title': 'Dita e madhe',
-    'story.item3.text': 'Dhe tani, me gëzim të madh, ju ftojmë të ndani me ne ditën më të bukur të jetës sonë.',
     'ceremony.eyebrow': '3 gusht 2026 · ora 18:00',
     'ceremony.title': 'Ceremonia',
     'ceremony.hall.title': 'Salla e Mbretërisë',
@@ -48,9 +37,6 @@ const i18n = {
     'ceremony.zoom.join': 'Lidhu në Zoom',
     'ceremony.dress.title': 'Veshja',
     'ceremony.dress.text': 'Ju lutemi veshje elegante dhe modeste, siç i përshtatet një rasti të tillë të veçantë në Sallën e Mbretërisë.',
-    'gallery.eyebrow': 'Çaste të bukura',
-    'gallery.title': 'Galeria',
-    'gallery.sub': 'Pas dasmës, këtu do të gjeni fotot më të bukura të ditës sonë të veçantë.',
     'rsvp.eyebrow': 'Ju lutemi përgjigjuni deri më 20 korrik',
     'rsvp.title': 'A do të vini?',
     'rsvp.sub': 'Prania juaj është dhurata më e çmuar për ne. Na tregoni nëse do të jeni pjesë e kësaj dite të veçantë.',
@@ -70,14 +56,13 @@ const i18n = {
     'rsvp.nameReq': 'Ju lutemi shkruani emrin tuaj.',
     'rsvp.demo': 'Demo: forma nuk është lidhur ende. Krijoni një formë falas në formspree.io dhe vendosni ID-në te index.html.',
     'footer.thanks': 'Me dashuri dhe mirënjohje, ju presim me gëzim!',
+    'intro.skip': 'Prekni për të vazhduar',
     'cal.title': 'Dasma e Endrit dhe Kristjanës',
     'cal.desc': 'Fjalimi i dasmës në Sallën e Mbretërisë.',
     'cal.location': 'Salla e Mbretërisë',
   },
   en: {
-    'nav.story': 'Our story',
     'nav.ceremony': 'Ceremony',
-    'nav.gallery': 'Gallery',
     'nav.rsvp': 'RSVP',
     'hero.eyebrow': "With Jehovah's blessing",
     'hero.date': 'Monday, August 3, 2026 · 6:00 PM',
@@ -92,15 +77,6 @@ const i18n = {
     'cd.secs': 'Seconds',
     'cd.married': 'We got married!',
     'photo.main': 'Place your main photo here',
-    'photo.here': 'Photo here',
-    'story.eyebrow': 'Our journey',
-    'story.title': 'Our story',
-    'story.item1.title': 'How we met',
-    'story.item1.text': 'Write your story here — where you first met, what impressed you, and how it all began.',
-    'story.item2.title': 'The proposal',
-    'story.item2.text': 'The special moment you decided to join your lives — write here how it happened.',
-    'story.item3.title': 'The big day',
-    'story.item3.text': 'And now, with great joy, we invite you to share with us the most beautiful day of our lives.',
     'ceremony.eyebrow': 'August 3, 2026 · 6:00 PM',
     'ceremony.title': 'The ceremony',
     'ceremony.hall.title': 'Kingdom Hall',
@@ -116,9 +92,6 @@ const i18n = {
     'ceremony.zoom.join': 'Join on Zoom',
     'ceremony.dress.title': 'Dress code',
     'ceremony.dress.text': 'Kindly wear elegant, modest attire, fitting for such a special occasion at the Kingdom Hall.',
-    'gallery.eyebrow': 'Beautiful moments',
-    'gallery.title': 'Gallery',
-    'gallery.sub': 'After the wedding, you will find the most beautiful photos of our special day here.',
     'rsvp.eyebrow': 'Kindly reply by July 20',
     'rsvp.title': 'Will you join us?',
     'rsvp.sub': 'Your presence is the most precious gift for us. Let us know if you will be part of this special day.',
@@ -138,6 +111,7 @@ const i18n = {
     'rsvp.nameReq': 'Please enter your name.',
     'rsvp.demo': 'Demo: the form is not connected yet. Create a free form at formspree.io and set the ID in index.html.',
     'footer.thanks': 'With love and gratitude, we joyfully await you!',
+    'intro.skip': 'Tap to continue',
     'cal.title': 'Wedding of Endri and Kristjana',
     'cal.desc': 'Wedding talk at the Kingdom Hall.',
     'cal.location': 'Kingdom Hall',
@@ -337,5 +311,69 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
+/* ================= Falling petals ================= */
+function spawnPetals(host, count) {
+  if (!host) return;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('i');
+    p.className = 'petal petal-' + (1 + (i % 3));
+    const w = 8 + Math.random() * 9;
+    p.style.cssText =
+      'left:' + (Math.random() * 100).toFixed(1) + '%;' +
+      'width:' + w.toFixed(1) + 'px;height:' + (w * 1.3).toFixed(1) + 'px;' +
+      '--dur:' + (7 + Math.random() * 6).toFixed(1) + 's;' +
+      '--delay:' + (-(Math.random() * 12)).toFixed(1) + 's;' +
+      '--sway:' + (Math.random() * 140 - 60).toFixed(0) + 'px';
+    host.appendChild(p);
+  }
+}
+
+/* ================= Intro overlay ================= */
+function buildIntro() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const intro = document.createElement('div');
+  intro.id = 'intro';
+  intro.setAttribute('aria-hidden', 'true');
+
+  const letters = 'Endri & Kristjana'
+    .split('')
+    .map((ch, i) => {
+      const glyph = ch === ' ' ? '&nbsp;' : ch === '&' ? '<span class="amp">&amp;</span>' : ch;
+      return '<span class="intro-letter" style="animation-delay:' + (0.35 + i * 0.075).toFixed(3) + 's">' + glyph + '</span>';
+    })
+    .join('');
+
+  intro.innerHTML =
+    '<div class="petals"></div>' +
+    '<p class="intro-eyebrow">' + t('hero.eyebrow') + '</p>' +
+    '<p class="intro-names">' + letters + '</p>' +
+    '<div class="intro-cord"><svg viewBox="0 0 600 50" preserveAspectRatio="none">' +
+    '<path class="cord cord-1" d="M0,25 C40,8 80,42 120,25 S200,8 240,25 S320,42 360,25 S440,8 480,25 S560,42 600,25"/>' +
+    '<path class="cord cord-2" d="M0,25 C40,42 80,8 120,25 S200,42 240,25 S320,8 360,25 S440,42 480,25 S560,8 600,25"/>' +
+    '<path class="cord cord-3" d="M0,25 C50,25 90,25 150,25 S250,25 300,25 S450,25 600,25"/>' +
+    '</svg></div>' +
+    '<p class="intro-date">' + t('hero.date') + '</p>' +
+    '<p class="intro-skip">' + t('intro.skip') + '</p>';
+
+  document.body.appendChild(intro);
+  document.body.classList.add('intro-active');
+  spawnPetals(intro.querySelector('.petals'), 16);
+
+  let done = false;
+  const dismiss = () => {
+    if (done) return;
+    done = true;
+    intro.classList.add('leave');
+    document.body.classList.remove('intro-active');
+    setTimeout(() => intro.remove(), 950);
+  };
+
+  intro.addEventListener('click', dismiss);
+  setTimeout(dismiss, 3800);
+}
+
 /* ================= Init ================= */
 applyLanguage();
+spawnPetals(document.getElementById('heroPetals'), 12);
+buildIntro();

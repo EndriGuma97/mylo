@@ -14,7 +14,6 @@ npx serve .
 
 1. **Adresa e Sallës së Mbretërisë** — te seksioni "Ceremonia", dhe linku i hartës (`mapBtn`).
 2. **Të dhënat e Zoom-it** — ID, kodi dhe linku i mbledhjes.
-3. **Historia juaj** — tri paragrafët te "Historia jonë" (në `js/main.js` te `i18n`, në të dyja gjuhët).
 
 ## Fotot
 
@@ -23,8 +22,6 @@ Krijoni dosjen `assets/` dhe vendosni fotot me këta emra (ose ndryshoni emrat n
 | Skedari | Vendi | Përmasa e sugjeruar |
 |---|---|---|
 | `assets/foto-kryesore.jpg` | Nën hero | 1600 × 900 |
-| `assets/historia-1.jpg` … `historia-3.jpg` | Historia jonë | 800 × 800 |
-| `assets/galeria-1.jpg` … `galeria-6.jpg` | Galeria | 800 × 600 |
 
 Për të zëvendësuar një placeholder, ndërroni `<div class="photo-placeholder">...</div>` me:
 

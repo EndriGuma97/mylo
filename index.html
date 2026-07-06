@@ -7,17 +7,74 @@
   <meta name="description" content="Ftesa e dasmës së Endrit dhe Kristjanës — 3 gusht 2026, ora 18:00.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="fl-peony">
+        <g fill="#ecc9d0">
+          <ellipse rx="13" ry="26" cy="-22"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(45)"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(90)"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(135)"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(180)"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(225)"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(270)"/>
+          <ellipse rx="13" ry="26" cy="-22" transform="rotate(315)"/>
+        </g>
+        <g fill="#e2b0bc">
+          <ellipse rx="10" ry="19" cy="-15" transform="rotate(30)"/>
+          <ellipse rx="10" ry="19" cy="-15" transform="rotate(90)"/>
+          <ellipse rx="10" ry="19" cy="-15" transform="rotate(150)"/>
+          <ellipse rx="10" ry="19" cy="-15" transform="rotate(210)"/>
+          <ellipse rx="10" ry="19" cy="-15" transform="rotate(270)"/>
+          <ellipse rx="10" ry="19" cy="-15" transform="rotate(330)"/>
+        </g>
+        <g fill="#d795a5">
+          <ellipse rx="6.5" ry="12" cy="-8" transform="rotate(15)"/>
+          <ellipse rx="6.5" ry="12" cy="-8" transform="rotate(105)"/>
+          <ellipse rx="6.5" ry="12" cy="-8" transform="rotate(195)"/>
+          <ellipse rx="6.5" ry="12" cy="-8" transform="rotate(285)"/>
+        </g>
+        <circle r="5.5" fill="#c77f92"/>
+        <path d="M-2.5 -1.5 a3.5 3.5 0 1 1 4.5 3.5" stroke="#a95e73" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      </g>
+      <g id="fl-sprig" fill="#a9c4b3">
+        <path d="M0 0 C5 -35 -5 -80 2 -118" stroke="#8fae9b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="-9" cy="-16" rx="6" ry="7"/>
+        <ellipse cx="10" cy="-30" rx="6" ry="7" fill="#93b3a1"/>
+        <ellipse cx="-10" cy="-46" rx="6" ry="7"/>
+        <ellipse cx="10" cy="-60" rx="6" ry="7" fill="#93b3a1"/>
+        <ellipse cx="-9" cy="-76" rx="5.5" ry="6.5"/>
+        <ellipse cx="9" cy="-90" rx="5.5" ry="6.5" fill="#93b3a1"/>
+        <ellipse cx="-7" cy="-104" rx="5" ry="6"/>
+        <ellipse cx="5" cy="-116" rx="4.5" ry="5.5" fill="#93b3a1"/>
+      </g>
+      <g id="fl-leafbranch">
+        <path d="M0 0 C10 -30 6 -70 24 -100" stroke="#8fae9b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M4 -18 q20 -4 28 -24 q-24 2 -28 24z" fill="#9fbcaa"/>
+        <path d="M2 -34 q-20 -2 -30 -20 q22 -2 30 20z" fill="#8fae9b"/>
+        <path d="M8 -56 q18 -6 24 -26 q-22 4 -24 26z" fill="#9fbcaa"/>
+        <path d="M8 -72 q-18 -2 -26 -20 q20 -2 26 20z" fill="#8fae9b"/>
+      </g>
+      <g id="fl-bouquet">
+        <use href="#fl-sprig" transform="translate(155,300) rotate(15) scale(1.3)"/>
+        <use href="#fl-sprig" transform="translate(55,305) rotate(-18) scale(1.15)"/>
+        <use href="#fl-leafbranch" transform="translate(105,305) rotate(-4) scale(1.15)"/>
+        <use href="#fl-peony" transform="translate(85,235) scale(1.35)"/>
+        <use href="#fl-peony" transform="translate(160,272) rotate(25) scale(0.9)"/>
+        <use href="#fl-peony" transform="translate(28,283) rotate(-10) scale(0.62)"/>
+      </g>
+    </defs>
+  </svg>
+
   <nav id="navbar">
     <a class="nav-monogram" href="#hero">E<span>&amp;</span>K</a>
     <div class="nav-links" id="navLinks">
-      <a href="#story" data-i18n="nav.story">Historia jonë</a>
       <a href="#ceremony" data-i18n="nav.ceremony">Ceremonia</a>
-      <a href="#gallery" data-i18n="nav.gallery">Galeria</a>
       <a href="#rsvp" class="nav-rsvp" data-i18n="nav.rsvp">Konfirmo</a>
     </div>
     <div class="nav-right">
@@ -27,12 +84,9 @@
   </nav>
 
   <header id="hero">
-    <div class="hero-botanical hero-botanical-left" aria-hidden="true">
-      <svg viewBox="0 0 200 300" fill="none"><path class="branch" d="M20 290 C60 220 40 150 90 90 C120 55 150 40 180 30" stroke="currentColor" stroke-width="2"/><path class="leaf" d="M60 200 q30 -8 38 -38 q-32 6 -38 38z" fill="currentColor"/><path class="leaf" d="M48 235 q-30 -2 -44 -28 q30 -4 44 28z" fill="currentColor"/><path class="leaf" d="M85 140 q32 -12 36 -44 q-34 10 -36 44z" fill="currentColor"/><path class="leaf" d="M75 165 q-28 0 -44 -24 q28 -6 44 24z" fill="currentColor"/><path class="leaf" d="M120 85 q30 -14 30 -46 q-32 14 -30 46z" fill="currentColor"/><path class="leaf" d="M105 108 q-26 2 -44 -20 q26 -8 44 20z" fill="currentColor"/></svg>
-    </div>
-    <div class="hero-botanical hero-botanical-right" aria-hidden="true">
-      <svg viewBox="0 0 200 300" fill="none"><path class="branch" d="M180 290 C140 220 160 150 110 90 C80 55 50 40 20 30" stroke="currentColor" stroke-width="2"/><path class="leaf" d="M140 200 q-30 -8 -38 -38 q32 6 38 38z" fill="currentColor"/><path class="leaf" d="M152 235 q30 -2 44 -28 q-30 -4 -44 28z" fill="currentColor"/><path class="leaf" d="M115 140 q-32 -12 -36 -44 q34 10 36 44z" fill="currentColor"/><path class="leaf" d="M125 165 q28 0 44 -24 q-28 -6 -44 24z" fill="currentColor"/><path class="leaf" d="M80 85 q-30 -14 -30 -46 q32 14 30 46z" fill="currentColor"/><path class="leaf" d="M95 108 q26 2 44 -20 q-26 -8 -44 20z" fill="currentColor"/></svg>
-    </div>
+    <div class="petals" id="heroPetals" aria-hidden="true"></div>
+    <div class="floral floral-hero-left" aria-hidden="true"><svg viewBox="0 0 260 310"><use href="#fl-bouquet"/></svg></div>
+    <div class="floral floral-hero-right" aria-hidden="true"><svg viewBox="0 0 260 310"><use href="#fl-bouquet"/></svg></div>
 
     <p class="hero-guest" id="guestGreeting" hidden></p>
     <p class="hero-eyebrow" data-i18n="hero.eyebrow">Me bekimin e Jehovait</p>
@@ -67,7 +121,7 @@
       <button class="btn btn-ghost" id="calBtn" data-i18n="hero.calendar">Shto në kalendar</button>
     </div>
 
-    <a href="#story" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    <a href="#ceremony" class="scroll-hint" aria-label="Scroll down"><span></span></a>
   </header>
 
   <section class="hero-photo reveal">
@@ -78,57 +132,10 @@
     </div>
   </section>
 
-  <section id="story" class="section">
-    <p class="section-eyebrow reveal" data-i18n="story.eyebrow">Rrugëtimi ynë</p>
-    <h2 class="section-title reveal" data-i18n="story.title">Historia jonë</h2>
-    <div class="cord-divider small reveal" aria-hidden="true">
-      <svg viewBox="0 0 600 50" preserveAspectRatio="none">
-        <path class="cord cord-1" d="M0,25 C40,8 80,42 120,25 S200,8 240,25 S320,42 360,25 S440,8 480,25 S560,42 600,25"/>
-        <path class="cord cord-2" d="M0,25 C40,42 80,8 120,25 S200,42 240,25 S320,8 360,25 S440,42 480,25 S560,8 600,25"/>
-        <path class="cord cord-3" d="M0,25 C50,25 90,25 150,25 S250,25 300,25 S450,25 600,25"/>
-      </svg>
-    </div>
-
-    <div class="timeline">
-      <article class="timeline-item reveal">
-        <div class="photo-placeholder photo-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg>
-          <p data-i18n="photo.here">Foto këtu</p>
-          <small>assets/historia-1.jpg</small>
-        </div>
-        <div class="timeline-text">
-          <h3 data-i18n="story.item1.title">Si u njohëm</h3>
-          <p data-i18n="story.item1.text">Shkruani këtu historinë tuaj — ku u takuat për herë të parë, çfarë ju bëri përshtypje dhe si nisi gjithçka.</p>
-        </div>
-      </article>
-
-      <article class="timeline-item reveal">
-        <div class="photo-placeholder photo-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg>
-          <p data-i18n="photo.here">Foto këtu</p>
-          <small>assets/historia-2.jpg</small>
-        </div>
-        <div class="timeline-text">
-          <h3 data-i18n="story.item2.title">Propozimi</h3>
-          <p data-i18n="story.item2.text">Momenti i veçantë kur vendosët të bashkoni jetët tuaja — shkruani këtu se si ndodhi.</p>
-        </div>
-      </article>
-
-      <article class="timeline-item reveal">
-        <div class="photo-placeholder photo-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg>
-          <p data-i18n="photo.here">Foto këtu</p>
-          <small>assets/historia-3.jpg</small>
-        </div>
-        <div class="timeline-text">
-          <h3 data-i18n="story.item3.title">Dita e madhe</h3>
-          <p data-i18n="story.item3.text">Dhe tani, me gëzim të madh, ju ftojmë të ndani me ne ditën më të bukur të jetës sonë.</p>
-        </div>
-      </article>
-    </div>
-  </section>
 
   <section id="ceremony" class="section section-green">
+    <div class="floral floral-corner floral-cer-tr" aria-hidden="true"><svg viewBox="0 0 260 310"><use href="#fl-bouquet"/></svg></div>
+    <div class="floral floral-corner floral-cer-bl" aria-hidden="true"><svg viewBox="0 0 260 310"><use href="#fl-bouquet"/></svg></div>
     <p class="section-eyebrow reveal" data-i18n="ceremony.eyebrow">3 gusht 2026 &middot; ora 18:00</p>
     <h2 class="section-title reveal" data-i18n="ceremony.title">Ceremonia</h2>
 
@@ -169,22 +176,9 @@
     </p>
   </section>
 
-  <section id="gallery" class="section section-ivory">
-    <p class="section-eyebrow reveal" data-i18n="gallery.eyebrow">Çaste të bukura</p>
-    <h2 class="section-title reveal" data-i18n="gallery.title">Galeria</h2>
-    <p class="section-sub reveal" data-i18n="gallery.sub">Pas dasmës, këtu do të gjeni fotot më të bukura të ditës sonë të veçantë.</p>
-
-    <div class="gallery-grid">
-      <div class="photo-placeholder reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg><p data-i18n="photo.here">Foto këtu</p><small>assets/galeria-1.jpg</small></div>
-      <div class="photo-placeholder reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg><p data-i18n="photo.here">Foto këtu</p><small>assets/galeria-2.jpg</small></div>
-      <div class="photo-placeholder reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg><p data-i18n="photo.here">Foto këtu</p><small>assets/galeria-3.jpg</small></div>
-      <div class="photo-placeholder reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg><p data-i18n="photo.here">Foto këtu</p><small>assets/galeria-4.jpg</small></div>
-      <div class="photo-placeholder reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg><p data-i18n="photo.here">Foto këtu</p><small>assets/galeria-5.jpg</small></div>
-      <div class="photo-placeholder reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4"/></svg><p data-i18n="photo.here">Foto këtu</p><small>assets/galeria-6.jpg</small></div>
-    </div>
-  </section>
 
   <section id="rsvp" class="section section-green">
+    <div class="floral floral-corner floral-rsvp-br" aria-hidden="true"><svg viewBox="0 0 260 310"><use href="#fl-bouquet"/></svg></div>
     <p class="section-eyebrow reveal" data-i18n="rsvp.eyebrow">Ju lutemi përgjigjuni deri më 20 korrik</p>
     <h2 class="section-title reveal" data-i18n="rsvp.title">A do të vini?</h2>
     <p class="section-sub reveal" data-i18n="rsvp.sub">Prania juaj është dhurata më e çmuar për ne. Na tregoni nëse do të jeni pjesë e kësaj dite të veçantë.</p>
