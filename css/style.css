@@ -7,8 +7,8 @@
   --gold: #c9a227;
   --gold-light: #e3c766;
   --gold-pale: #f3e7c3;
-  --ivory: #faf7f0;
-  --ivory-dark: #f1ebdd;
+  --ivory: #ffffff;
+  --ivory-dark: #f7f7f7;
   --text: #29271f;
   --text-soft: #6b675a;
   --white: #ffffff;
@@ -49,7 +49,7 @@ section { scroll-margin-top: 70px; }
 }
 
 #navbar.scrolled {
-  background: rgba(250, 247, 240, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(13, 53, 39, 0.08);
   padding: 8px 5vw;
@@ -151,10 +151,7 @@ section { scroll-margin-top: 70px; }
   padding: 110px 24px 80px;
   position: relative;
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.07), transparent 55%),
-    radial-gradient(ellipse at 50% 100%, rgba(13, 53, 39, 0.05), transparent 55%),
-    var(--ivory);
+  background: var(--ivory);
 }
 
 .floral {
@@ -697,9 +694,9 @@ footer {
   animation: petalFall var(--dur, 10s) linear var(--delay, 0s) infinite;
 }
 
-.petal-1 { background: #ecc8cf; }
-.petal-2 { background: #e7d093; }
-.petal-3 { background: #b9d1c2; }
+.petal-1 { background: #d64550; }
+.petal-2 { background: #b22334; }
+.petal-3 { background: #8f1e2c; }
 
 @keyframes petalFall {
   0% { transform: translate3d(0, -4vh, 0) rotate(12deg); opacity: 0; }
