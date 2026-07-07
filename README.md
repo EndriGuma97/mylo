@@ -12,10 +12,11 @@ npx serve .
 
 ## Çfarë duhet të plotësoni (kërkoni `[` në index.html)
 
-1. **Të dhënat e Zoom-it** — ID, kodi dhe linku i mbledhjes.
+1. **Kodi i Zoom-it (nëse mbledhja ka)** — te karta "Ndiqni në Zoom".
 
-(Adresa e Sallës së Mbretërisë — Rruga Jani Bakalli, Lagja 1 Maj, Fier —
-dhe harta me GPS 40.72356, 19.5627 janë vendosur tashmë.)
+(Vendosur tashmë: adresa e Sallës së Mbretërisë — Rruga Jani Bakalli,
+Lagja 1 Maj, Fier — harta me GPS 40.72356, 19.5627, dhe Zoom ID
+959 9355 3342 me linkun zoom.us/j/95993553342.)
 
 ## Fotot
 
