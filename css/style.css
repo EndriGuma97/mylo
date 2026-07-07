@@ -884,19 +884,33 @@ body.intro-active #hero * { animation-play-state: paused !important; }
 
   .floral-hero-left, .floral-hero-right { opacity: 0.55; }
 
-  .hero-grid { grid-template-columns: 1fr; gap: 10px; }
+  .hero-grid { display: flex; flex-direction: column; gap: 12px; }
 
-  .hero-photo-frame { max-width: min(260px, 64vw); }
+  .hero-content { display: contents; }
 
-  .hero-invite { margin-top: 18px; margin-bottom: 10px; }
+  .hero-guest { order: 1; margin-bottom: 0; }
 
-  .hero-content .cord-divider { margin: 10px auto; }
+  .hero-photo-frame { order: 2; max-width: min(270px, 66vw); }
+
+  .hero-names { order: 3; }
+
+  .hero-invite { order: 4; margin: 0 auto; }
+
+  .hero-content .cord-divider { order: 5; margin: 0 auto; }
+
+  .hero-date { order: 6; margin-top: 0; }
+
+  .hero-content .countdown { order: 7; margin-top: 10px; }
+
+  .hero-content .hero-actions { order: 8; margin-top: 10px; }
 }
 
 @media (max-width: 480px) {
   #hero { padding: 96px 16px 70px; }
 
-  .hero-names { font-size: clamp(44px, 14vw, 58px); }
+  .hero-names { order: 2; font-size: clamp(44px, 13vw, 54px); }
+
+  .hero-photo-frame { order: 3; }
 
   .count-sep { display: none; }
 
