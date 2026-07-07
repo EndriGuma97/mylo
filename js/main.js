@@ -11,7 +11,7 @@ const i18n = {
     'nav.rsvp': 'Konfirmo',
     'hero.eyebrow': 'Po bashkojmë jetët tona',
     'hero.date': 'E hënë, 3 gusht 2026 · ora 18:00',
-    'hero.verse': '«Litari trefish nuk këputet shpejt.»',
+    'hero.verse': '«Një litar tresh nuk këputet kollaj më dysh.»',
     'hero.verseRef': '— Eklisiastiu 4:12',
     'hero.cta': 'Konfirmo pjesëmarrjen',
     'hero.calendar': 'Shto në kalendar',
