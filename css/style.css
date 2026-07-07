@@ -204,13 +204,16 @@ section { scroll-margin-top: 70px; }
   animation: fadeUp 1s ease both;
 }
 
-.hero-eyebrow {
-  font-size: clamp(12px, 1.5vw, 15px);
-  letter-spacing: 5px;
-  text-transform: uppercase;
+.hero-invite {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(17px, 2.4vw, 23px);
   color: var(--text-soft);
-  margin-bottom: 18px;
-  animation: fadeUp 1s ease 0.15s both;
+  max-width: 560px;
+  line-height: 1.6;
+  margin: 18px auto 4px;
+  padding: 0 8px;
+  animation: fadeUp 1s ease 0.3s both;
 }
 
 .hero-names {
@@ -219,7 +222,7 @@ section { scroll-margin-top: 70px; }
   font-size: clamp(58px, 11vw, 116px);
   line-height: 1.05;
   color: var(--green-900);
-  animation: fadeUp 1.1s ease 0.3s both;
+  animation: fadeUp 1.1s ease 0.45s both;
 }
 
 .amp {
@@ -234,18 +237,7 @@ section { scroll-margin-top: 70px; }
   letter-spacing: 2.5px;
   color: var(--green-700);
   margin-top: 6px;
-  animation: fadeUp 1.1s ease 0.5s both;
-}
-
-.hero-verse {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(17px, 2.2vw, 22px);
-  color: var(--text-soft);
-  max-width: 520px;
-  margin: 26px auto 0;
-  line-height: 1.55;
-  animation: fadeUp 1.1s ease 0.65s both;
+  animation: fadeUp 1.1s ease 0.7s both;
 }
 
 .verse-ref {
@@ -265,7 +257,7 @@ section { scroll-margin-top: 70px; }
   height: 44px;
   margin: 22px auto;
   position: relative;
-  animation: fadeUp 1.1s ease 0.4s both;
+  animation: fadeUp 1.1s ease 0.6s both;
 }
 
 .cord-divider.small { width: min(260px, 55vw); height: 34px; margin: 10px auto 40px; }
@@ -499,13 +491,13 @@ section { scroll-margin-top: 70px; }
 /* ---------- Hero photo ---------- */
 .hero-photo-frame {
   width: min(300px, 66vw);
-  margin: 24px auto 6px;
+  margin: 6px auto 0;
   border-radius: min(150px, 33vw) min(150px, 33vw) 18px 18px;
   overflow: hidden;
   border: 7px solid var(--white);
   background: var(--white);
   box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.45), var(--shadow-lift);
-  animation: fadeUp 1.1s ease 0.45s both;
+  animation: fadeUp 1.1s ease 0.15s both;
 }
 
 .hero-photo-frame img {
@@ -745,16 +737,6 @@ footer {
 
 #intro.leave { transform: translateY(-100%); opacity: 0.5; }
 
-.intro-eyebrow {
-  font-family: var(--sans);
-  font-size: 13px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #9fbfae;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.15s forwards;
-}
-
 .intro-names {
   font-family: var(--script);
   font-weight: 400;
@@ -788,16 +770,28 @@ footer {
 .intro-cord .div-ring-2 { stroke: var(--blush); }
 .intro-cord .div-dot { fill: var(--gold-light); }
 
-.intro-sub {
-  font-family: var(--sans);
-  font-size: clamp(13px, 2vw, 15px);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-top: 12px;
+.intro-verse {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 2.8vw, 21px);
+  color: var(--gold-pale);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-top: 14px;
   padding: 0 24px;
   opacity: 0;
-  animation: fadeUp 0.9s ease 2.3s forwards;
+  animation: fadeUp 0.9s ease 2.1s forwards;
+}
+
+.intro-verse-ref {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
 }
 
 .intro-skip {
@@ -877,7 +871,7 @@ body.intro-active #hero * { animation-play-state: paused !important; }
 
   .hero-actions .btn { width: 100%; max-width: 300px; text-align: center; }
 
-  .hero-verse { font-size: 16px; padding: 0 8px; }
+  .hero-invite { font-size: 16px; padding: 0 12px; }
 
   .cord-divider { margin: 16px auto; }
 
@@ -907,5 +901,5 @@ body.intro-active #hero * { animation-play-state: paused !important; }
   .div-line, .div-ring { stroke-dashoffset: 0; }
   .div-leaf, .div-dot { opacity: 1; }
   #intro, .petal { display: none !important; }
-  .intro-eyebrow, .intro-letter, .intro-sub, .intro-skip { opacity: 1; transform: none; filter: none; }
+  .intro-letter, .intro-verse, .intro-skip { opacity: 1; transform: none; filter: none; }
 }

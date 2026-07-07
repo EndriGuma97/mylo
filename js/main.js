@@ -9,7 +9,7 @@ const i18n = {
   sq: {
     'nav.ceremony': 'Ceremonia',
     'nav.rsvp': 'Konfirmo',
-    'hero.eyebrow': 'Po bashkojmë jetët tona',
+    'hero.invite': 'Ju ftojmë përzemërsisht në ceremoninë e fjalimit të martesës sonë',
     'hero.date': 'E hënë, 3 gusht 2026 · ora 18:00',
     'hero.verse': '«Një litar tresh nuk këputet kollaj më dysh.»',
     'hero.verseRef': '— Eklisiastiu 4:12',
@@ -55,9 +55,7 @@ const i18n = {
     'rsvp.nameReq': 'Ju lutemi shkruani emrin tuaj.',
     'rsvp.demo': 'Demo: forma nuk është lidhur ende. Krijoni një formë falas në formspree.io dhe vendosni ID-në te index.html.',
     'footer.thanks': 'Me dashuri dhe mirënjohje, ju presim me gëzim!',
-    'intro.eyebrow': 'Ftesë për dasmën tonë',
-    'intro.line': 'Dy zemra, një jetë',
-    'intro.sub': 'Ju presim me gëzim më 3 gusht 2026',
+    'intro.line': 'Endri & Kristjana',
     'intro.skip': 'Prekni për të vazhduar',
     'cal.title': 'Dasma e Endrit dhe Kristjanës',
     'cal.desc': 'Fjalimi i dasmës në Sallën e Mbretërisë.',
@@ -66,7 +64,7 @@ const i18n = {
   en: {
     'nav.ceremony': 'Ceremony',
     'nav.rsvp': 'RSVP',
-    'hero.eyebrow': 'We are joining our lives',
+    'hero.invite': 'We warmly invite you to the ceremony of our wedding talk',
     'hero.date': 'Monday, August 3, 2026 · 6:00 PM',
     'hero.verse': '"A threefold cord cannot quickly be torn apart."',
     'hero.verseRef': '— Ecclesiastes 4:12',
@@ -112,9 +110,7 @@ const i18n = {
     'rsvp.nameReq': 'Please enter your name.',
     'rsvp.demo': 'Demo: the form is not connected yet. Create a free form at formspree.io and set the ID in index.html.',
     'footer.thanks': 'With love and gratitude, we joyfully await you!',
-    'intro.eyebrow': 'An invitation to our wedding',
-    'intro.line': 'Two hearts, one life',
-    'intro.sub': 'Joyfully awaiting you on August 3, 2026',
+    'intro.line': 'Endri & Kristjana',
     'intro.skip': 'Tap to continue',
     'cal.title': 'Wedding of Endri and Kristjana',
     'cal.desc': 'Wedding talk at the Kingdom Hall.',
@@ -364,7 +360,6 @@ function buildIntro() {
 
   intro.innerHTML =
     '<div class="petals"></div>' +
-    '<p class="intro-eyebrow">' + t('intro.eyebrow') + '</p>' +
     '<p class="intro-names">' + letters + '</p>' +
     '<div class="intro-cord"><svg viewBox="0 0 600 60">' +
     '<path class="div-line" d="M40 30 H262"/>' +
@@ -376,7 +371,7 @@ function buildIntro() {
     '<circle class="div-ring div-ring-1" cx="291" cy="30" r="11"/>' +
     '<circle class="div-ring div-ring-2" cx="309" cy="30" r="11"/>' +
     '</svg></div>' +
-    '<p class="intro-sub">' + t('intro.sub') + '</p>' +
+    '<p class="intro-verse">' + t('hero.verse') + '<br><span class="intro-verse-ref">' + t('hero.verseRef') + '</span></p>' +
     '<p class="intro-skip">' + t('intro.skip') + '</p>';
 
   document.body.appendChild(intro);
@@ -393,7 +388,7 @@ function buildIntro() {
   };
 
   intro.addEventListener('click', dismiss);
-  setTimeout(dismiss, 3800);
+  setTimeout(dismiss, 4300);
 }
 
 /* ================= Init ================= */
