@@ -12,8 +12,10 @@ npx serve .
 
 ## Çfarë duhet të plotësoni (kërkoni `[` në index.html)
 
-1. **Adresa e Sallës së Mbretërisë** — te seksioni "Ceremonia", dhe linku i hartës (`mapBtn`).
-2. **Të dhënat e Zoom-it** — ID, kodi dhe linku i mbledhjes.
+1. **Të dhënat e Zoom-it** — ID, kodi dhe linku i mbledhjes.
+
+(Adresa e Sallës së Mbretërisë — Rruga Jani Bakalli, Lagja 1 Maj, Fier —
+dhe harta me GPS 40.72356, 19.5627 janë vendosur tashmë.)
 
 ## Fotot
 

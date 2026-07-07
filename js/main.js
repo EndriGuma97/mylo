@@ -25,7 +25,7 @@ const i18n = {
     'ceremony.title': 'Ceremonia',
     'ceremony.hall.title': 'Salla e Mbretërisë',
     'ceremony.hall.text': 'Fjalimi biblik i dasmës do të mbahet në Sallën e Mbretërisë së Dëshmitarëve të Jehovait.',
-    'ceremony.hall.address': '[Adresa e Sallës së Mbretërisë]',
+    'ceremony.hall.address': 'Rruga Jani Bakalli, Lagja 1 Maj, Fier',
     'ceremony.hall.map': 'Hap hartën',
     'ceremony.time.title': 'Orari',
     'ceremony.time.text': "Fjalimi fillon pikërisht në orën 18:00. Ju lutemi të mbërrini 15 minuta më herët për t'u ulur të qetë.",
@@ -61,7 +61,7 @@ const i18n = {
     'intro.skip': 'Prekni për të vazhduar',
     'cal.title': 'Dasma e Endrit dhe Kristjanës',
     'cal.desc': 'Fjalimi i dasmës në Sallën e Mbretërisë.',
-    'cal.location': 'Salla e Mbretërisë',
+    'cal.location': 'Salla e Mbretërisë, Rruga Jani Bakalli, Lagja 1 Maj, Fier',
   },
   en: {
     'nav.ceremony': 'Ceremony',
@@ -82,7 +82,7 @@ const i18n = {
     'ceremony.title': 'The ceremony',
     'ceremony.hall.title': 'Kingdom Hall',
     'ceremony.hall.text': "The Bible-based wedding talk will be held at the Kingdom Hall of Jehovah's Witnesses.",
-    'ceremony.hall.address': '[Kingdom Hall address]',
+    'ceremony.hall.address': 'Rruga Jani Bakalli, Lagja 1 Maj, Fier',
     'ceremony.hall.map': 'Open map',
     'ceremony.time.title': 'Schedule',
     'ceremony.time.text': 'The talk begins promptly at 6:00 PM. Please arrive 15 minutes early to be seated calmly.',
@@ -118,7 +118,7 @@ const i18n = {
     'intro.skip': 'Tap to continue',
     'cal.title': 'Wedding of Endri and Kristjana',
     'cal.desc': 'Wedding talk at the Kingdom Hall.',
-    'cal.location': 'Kingdom Hall',
+    'cal.location': 'Kingdom Hall, Rruga Jani Bakalli, Lagja 1 Maj, Fier',
   },
 };
 
@@ -239,6 +239,10 @@ function icsDate(d) {
   );
 }
 
+function icsEscape(s) {
+  return s.replace(/([,;\\])/g, '\\$1');
+}
+
 document.getElementById('calBtn').addEventListener('click', () => {
   const ics = [
     'BEGIN:VCALENDAR',
@@ -249,9 +253,9 @@ document.getElementById('calBtn').addEventListener('click', () => {
     'DTSTAMP:' + icsDate(new Date()),
     'DTSTART:' + icsDate(WEDDING_DATE),
     'DTEND:' + icsDate(WEDDING_END),
-    'SUMMARY:' + t('cal.title'),
-    'DESCRIPTION:' + t('cal.desc'),
-    'LOCATION:' + t('cal.location'),
+    'SUMMARY:' + icsEscape(t('cal.title')),
+    'DESCRIPTION:' + icsEscape(t('cal.desc')),
+    'LOCATION:' + icsEscape(t('cal.location')),
     'END:VEVENT',
     'END:VCALENDAR',
   ].join('\r\n');
