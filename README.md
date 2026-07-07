@@ -34,8 +34,16 @@ Alternativa pa regjistrim: https://formsubmit.co — vendosni si action
 
 ## Ftesa të personalizuara
 
-Shtoni `?guest=Emri` në link dhe i ftuari sheh emrin e vet në krye:
-`https://faqja-juaj.com/?guest=Maria`
+Shtoni `?guest=Emri` në link dhe i ftuari sheh emrin e vet në krye.
+Parametri `g` cakton gjininë e përshëndetjes:
+
+| Linku | Përshëndetja |
+|---|---|
+| `?guest=Bledi&g=m` | I dashur Bledi, |
+| `?guest=Arta&g=f` | E dashur Arta, |
+| `?guest=Familja Hoxha` (pa `g`) | Të dashur Familja Hoxha, |
+
+Shembull i plotë: `https://faqja-juaj.com/?guest=Bledi&g=m`
 
 ## Publikimi falas
 

@@ -15,7 +15,7 @@ const i18n = {
     'hero.verseRef': '— Eklisiastiu 4:12',
     'hero.cta': 'Konfirmo pjesëmarrjen',
     'hero.calendar': 'Shto në kalendar',
-    'hero.guest': (name) => `E dashur ${name},`,
+    'hero.guest': (name, g) => (g === 'm' ? 'I dashur' : g === 'f' ? 'E dashur' : 'Të dashur') + ` ${name},`,
     'cd.days': 'Ditë',
     'cd.hours': 'Orë',
     'cd.mins': 'Minuta',
@@ -72,7 +72,7 @@ const i18n = {
     'hero.verseRef': '— Ecclesiastes 4:12',
     'hero.cta': 'RSVP now',
     'hero.calendar': 'Add to calendar',
-    'hero.guest': (name) => `Dear ${name},`,
+    'hero.guest': (name, g) => `Dear ${name},`,
     'cd.days': 'Days',
     'cd.hours': 'Hours',
     'cd.mins': 'Minutes',
@@ -149,11 +149,13 @@ document.getElementById('langToggle').addEventListener('click', () => {
 
 /* ================= Personalized guest greeting (?guest=Emri) ================= */
 function renderGuestGreeting() {
-  const guest = new URLSearchParams(location.search).get('guest');
+  const params = new URLSearchParams(location.search);
+  const guest = params.get('guest');
+  const gender = (params.get('g') || '').toLowerCase();
   const el = document.getElementById('guestGreeting');
   if (guest && guest.trim()) {
     const name = guest.trim().slice(0, 60);
-    el.textContent = i18n[lang]['hero.guest'](name);
+    el.textContent = i18n[lang]['hero.guest'](name, gender);
     el.hidden = false;
   }
 }
