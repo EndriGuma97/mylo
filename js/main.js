@@ -9,7 +9,7 @@ const i18n = {
   sq: {
     'nav.ceremony': 'Ceremonia',
     'nav.rsvp': 'Konfirmo',
-    'hero.eyebrow': 'Me bekimin e Jehovait',
+    'hero.eyebrow': 'Po bashkojmë jetët tona',
     'hero.date': 'E hënë, 3 gusht 2026 · ora 18:00',
     'hero.verse': '«Litari trefish nuk këputet shpejt.»',
     'hero.verseRef': '— Eklisiastiu 4:12',
@@ -66,7 +66,7 @@ const i18n = {
   en: {
     'nav.ceremony': 'Ceremony',
     'nav.rsvp': 'RSVP',
-    'hero.eyebrow': "With Jehovah's blessing",
+    'hero.eyebrow': 'We are joining our lives',
     'hero.date': 'Monday, August 3, 2026 · 6:00 PM',
     'hero.verse': '"A threefold cord cannot quickly be torn apart."',
     'hero.verseRef': '— Ecclesiastes 4:12',
@@ -359,10 +359,15 @@ function buildIntro() {
     '<div class="petals"></div>' +
     '<p class="intro-eyebrow">' + t('intro.eyebrow') + '</p>' +
     '<p class="intro-names">' + letters + '</p>' +
-    '<div class="intro-cord"><svg viewBox="0 0 600 50" preserveAspectRatio="none">' +
-    '<path class="cord cord-1" d="M0,25 C40,8 80,42 120,25 S200,8 240,25 S320,42 360,25 S440,8 480,25 S560,42 600,25"/>' +
-    '<path class="cord cord-2" d="M0,25 C40,42 80,8 120,25 S200,42 240,25 S320,8 360,25 S440,42 480,25 S560,8 600,25"/>' +
-    '<path class="cord cord-3" d="M0,25 C50,25 90,25 150,25 S250,25 300,25 S450,25 600,25"/>' +
+    '<div class="intro-cord"><svg viewBox="0 0 600 60">' +
+    '<path class="div-line" d="M40 30 H262"/>' +
+    '<path class="div-line" d="M338 30 H560"/>' +
+    '<circle class="div-dot" cx="32" cy="30" r="2.2"/>' +
+    '<circle class="div-dot" cx="568" cy="30" r="2.2"/>' +
+    '<path class="div-leaf" d="M262 30 q-16 -4 -22 -18 q18 2 22 18z"/>' +
+    '<path class="div-leaf" d="M338 30 q16 -4 22 -18 q-18 2 -22 18z"/>' +
+    '<circle class="div-ring div-ring-1" cx="291" cy="30" r="11"/>' +
+    '<circle class="div-ring div-ring-2" cx="309" cy="30" r="11"/>' +
     '</svg></div>' +
     '<p class="intro-sub">' + t('intro.sub') + '</p>' +
     '<p class="intro-skip">' + t('intro.skip') + '</p>';
