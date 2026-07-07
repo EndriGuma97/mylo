@@ -221,7 +221,7 @@ section { scroll-margin-top: 70px; }
 .hero-invite {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(17px, 2.4vw, 23px);
+  font-size: clamp(20px, 2.9vw, 28px);
   color: var(--text-soft);
   max-width: 560px;
   line-height: 1.6;
@@ -926,7 +926,7 @@ body.intro-active #hero * { animation-play-state: paused !important; }
 
   .hero-actions .btn { width: 100%; max-width: 300px; text-align: center; }
 
-  .hero-invite { font-size: 16px; padding: 0 12px; }
+  .hero-invite { font-size: 19px; padding: 0 12px; }
 
   .cord-divider { margin: 16px auto; }
 
