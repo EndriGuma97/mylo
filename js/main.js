@@ -303,7 +303,8 @@ form.addEventListener('submit', async (e) => {
       body: new FormData(form),
       headers: { Accept: 'application/json' },
     });
-    if (res.ok) {
+    const data = await res.json().catch(() => null);
+    if (res.ok && !(data && String(data.success) === 'false')) {
       showStatus(t('rsvp.ok'), true);
       form.reset();
     } else {

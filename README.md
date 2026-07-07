@@ -21,16 +21,20 @@ Fotoja kryesore ndodhet te `assets/foto-kryesore.jpeg` dhe shfaqet nën hero
 me kornizë harku. Për ta ndërruar, thjesht zëvendësoni skedarin me një foto
 tjetër (mundësisht portret, p.sh. 960 × 1280).
 
-## Forma RSVP (Formspree — falas)
+## Forma RSVP (FormSubmit — falas, pa llogari)
 
-1. Regjistrohuni falas në https://formspree.io (50 përgjigje/muaj falas).
-2. Krijoni një formë të re — do të merrni një ID, p.sh. `xabcdefg`.
-3. Te `index.html`, zëvendësoni `YOUR_FORM_ID` në rreshtin:
-   `action="https://formspree.io/f/YOUR_FORM_ID"`
-4. Çdo përgjigje ju vjen me email dhe ruhet në panelin e Formspree.
+Forma është e lidhur me `andrewgouma@gmail.com` përmes https://formsubmit.co
+(endpoint-i AJAX). Përgjigjet vijnë me email në formë tabele.
 
-Alternativa pa regjistrim: https://formsubmit.co — vendosni si action
-`https://formsubmit.co/emaili-juaj@shembull.com`.
+**Aktivizimi (vetëm herën e parë):** kur dikush dërgon formularin e parë nga
+një domain i ri, FormSubmit ju dërgon një email aktivizimi — klikoni linkun
+brenda tij dhe që aty e tutje çdo RSVP ju vjen direkt në inbox.
+
+- Për të ndërruar email-in: te `index.html`, ndryshoni adresën në
+  `action="https://formsubmit.co/ajax/..."`.
+- Për të fshehur email-in nga kodi i faqes: pas aktivizimit, FormSubmit ju jep
+  një alias të rastësishëm (te emaili i aktivizimit) — zëvendësoni adresën me
+  atë alias në action.
 
 ## Ftesa të personalizuara
 
